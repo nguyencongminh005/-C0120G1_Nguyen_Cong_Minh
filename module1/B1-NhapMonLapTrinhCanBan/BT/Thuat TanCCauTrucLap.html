@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="ketQua"></h1>
+<script>
+    var arr = [4, 8, 7, 9, 5, 2];
+    var max = arr[0];
+    for (var i = 0; i < arr.length; i++) {
+        if (max < arr[i]) {
+            max = arr[i]
+        }
+    }
+    document.getElementById("ketQua").innerText = max;
+    // document.write("so lon nhat la : " + max);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    ar nameCustomer = prompt("Enter name Customer:");
+    var idCard = prompt("Enter idCard Customer:");
+    var birthday = prompt("Enter birthday Customer(dd/mm/yyyy): ");
+    var email = prompt("Enter email Customer");
+    var addressCustomer = prompt("Enter address Customer:");
+    var typeCustomer = prompt("Enter type Customer:");
+    var discount = prompt("Enter discount:");
+    var numberOfAccompanying = prompt("Enter Number OfAccompanying:");
+    var typeRoom = prompt("Enter type Room:");
+    var rentDays = prompt("Enter rentDays:");
+    var typeService = prompt("Enter Type Service:")
+    var totalPays=0;
+    var Villa = 500;
+    var House = 300;
+    var Room = 100;
+    if (typeRoom==="Villa")
+        typeRoom= 500;
+    else if (typeRoom==="House")
+        typeRoom=300;
+    else if(typeRoom==="Room"   )
+        typeRoom = 100;
+    totalPays = typeRoom * rentDays * (1 - discount / 100)
+    //  hiển thị thông tin
+    alert(
+        "Infornation of Customer:"
+        +"\nName :" + nameCustomer
+        +"\nIdCard Customer :" + idCard
+        +"\nBirthday Customer:" + birthday
+        +"\nemail Customer:" + email
+        +"\naddress Customer :" + addressCustomer
+        +"\ntype Customer :" + typeCustomer
+        +"\ndiscount :" + discount
+        +"\nNumber OfAccompanying :" + numberOfAccompanying
+        +"\ntype Room :" +  typeRoom
+        +"\nrentDays :" + rentDays
+        +"\ntypeService  :" +  typeService
+        +"\ntotalPays" + totalPays);
+</script>
+</body>
+</html>

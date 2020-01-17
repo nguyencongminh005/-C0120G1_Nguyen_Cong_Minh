@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arrayFibo = new Array(); // khai bao cai mang
+
+    function hienThiMSoFifo(m) { // khai bao ham function
+        arrayFibo.push(0); // day vao mang
+        arrayFibo.push(1); // day vao mang
+        for (i = 2; i < m; i++) {  //vao vong lap
+            let a = arrayFibo[i - 2];
+            let b = arrayFibo[i - 1]; //khai bao 2 gia tri day vao mang
+            arrayFibo.push(getFibo(b, a));
+        }
+        document.write(arrayFibo); //xuat ket qua
+    }
+
+    function getFibo(x, y) { //kiem tra 2 tham so
+        return x + y;
+    }
+
+    hienThiMSoFifo(20);// hien this
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arrayFibo = new Array();
+
+    function hienThiMSoFifo(m) {
+        arrayFibo.push(0);
+        arrayFibo.push(1);
+        for (i = 2; i < m; i++) {
+            let a = arrayFibo[i - 2];
+            let b = arrayFibo[i - 1];
+            arrayFibo.push(getFibo(b, a));
+        }
+        document.write(arrayFibo);
+        var tong = 0;
+        for (var j = 0; j < arrayFibo.length; j++) {
+            tong += arrayFibo[j];
+        }
+        alert(tong);
+    }
+
+    function getFibo(x, y) {
+        return x + y;
+    }
+
+    function timSoDauTienCuaDayFiboChiaHetCho5(array) {
+        for (var i = 1; i < array.length; i++) {
+            if (array[i] % 5 == 0) {
+                return array[i];
+            }
+        }
+    }
+
+    hienThiMSoFifo(20);
+    document.write("Gia tri can tim la :" + timSoDauTienCuaDayFiboChiaHetCho5(arrayFibo));
+</script>
+</body>
+</html>
